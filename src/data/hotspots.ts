@@ -1,4 +1,4 @@
-export interface Hotspot {
+﻿export interface Hotspot {
   time: number; // seconds
   title: string;
   description: string;
@@ -28,7 +28,7 @@ export const hotspots: Hotspot[] = [
     structureId: 5,
   },
   {
-    time: 13,
+    time: 14,
     title: '折纸与剪纸启发结构',
     description: '精确的山折与谷折使薄片在拉伸时沿Z轴膨胀。纸的"表观厚度"可以增加数倍。',
     type: 'structure',
