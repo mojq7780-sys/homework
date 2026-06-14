@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo, useEffect, useCallback } from 'react';
+﻿import { useRef, useState, useMemo, useEffect, useCallback } from 'react';
 import { useVideoTime } from '../hooks/useVideoTime';
 import { hotspots } from '../data/hotspots';
 import HotspotCard from './HotspotCard';
@@ -89,7 +89,7 @@ export default function VideoPlayer({ onStructureClick }: Props) {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.videoWrapper} onClick={handleStartPlay}>
-          <video ref={videoRef} src="/videos/v2.mp4" className={styles.video} preload="metadata" />
+          <video ref={videoRef} src={import.meta.env.BASE_URL + "videos/v2.mp4"} className={styles.video} preload="metadata" />
 
           {/* Play overlay */}
           {showOverlay && (

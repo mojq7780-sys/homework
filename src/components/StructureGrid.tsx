@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { structures } from '../data/structures';
 import StructureDetail from './StructureDetail';
 import styles from './StructureGrid.module.css';
@@ -29,7 +29,7 @@ export default function StructureGrid({ initialOpenId }: Props) {
               onClick={() => setSelectedId(s.id)}
             >
               <div className={styles.imageWrap}>
-                <img src={s.image} alt={s.nameCN} className={styles.image} loading="lazy" />
+                <img src={import.meta.env.BASE_URL + s.image} alt={s.nameCN} className={styles.image} loading="lazy" />
               </div>
               <div className={styles.info}>
                 <h3 className={styles.name}>{s.nameCN}</h3>

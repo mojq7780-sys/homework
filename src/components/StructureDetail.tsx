@@ -1,4 +1,4 @@
-import type { Structure } from '../data/structures';
+﻿import type { Structure } from '../data/structures';
 import styles from './StructureDetail.module.css';
 
 interface Props {
@@ -16,7 +16,7 @@ export default function StructureDetail({ structure, onClose }: Props) {
 
         <div className={styles.layout}>
           <div className={styles.imageWrap}>
-            <img src={structure.image} alt={structure.nameCN} className={styles.image} />
+            <img src={import.meta.env.BASE_URL + structure.image} alt={structure.nameCN} className={styles.image} />
           </div>
 
           <div className={styles.content}>
