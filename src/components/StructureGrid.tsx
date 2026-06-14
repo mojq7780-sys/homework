@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { structures } from '../data/structures';
 import StructureDetail from './StructureDetail';
 import styles from './StructureGrid.module.css';
@@ -11,9 +11,9 @@ export default function StructureGrid({ initialOpenId }: Props) {
   const [selectedId, setSelectedId] = useState<number | null>(initialOpenId ?? null);
 
   // Sync with external initialOpenId
-  useState(() => {
+  useEffect(() => {
     if (initialOpenId) setSelectedId(initialOpenId);
-  });
+  }, [initialOpenId]);
 
   const selected = structures.find((s) => s.id === selectedId);
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import styles from './SteleSection.module.css';
 
 const steleLines = [
@@ -38,6 +38,7 @@ const whiteText =
 
 export default function SteleSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<number | null>(null);
   const [visibleLines, setVisibleLines] = useState(0);
 
   useEffect(() => {
@@ -46,10 +47,10 @@ export default function SteleSection() {
         if (entries[0].isIntersecting) {
           // Animate lines appearing one by one
           let count = 0;
-          const interval = setInterval(() => {
+          intervalRef.current = window.setInterval(() => {
             count++;
             setVisibleLines(count);
-            if (count >= steleLines.length) clearInterval(interval);
+            if (count >= steleLines.length) clearInterval(intervalRef.current!);
           }, 150);
           observer.disconnect();
         }
@@ -58,7 +59,7 @@ export default function SteleSection() {
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    return () => { observer.disconnect(); if (intervalRef.current) clearInterval(intervalRef.current); };
   }, []);
 
   return (
