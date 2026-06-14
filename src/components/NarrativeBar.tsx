@@ -1,4 +1,4 @@
-import { hotspots } from '../data/hotspots';
+﻿import { hotspots } from '../data/hotspots';
 import styles from './NarrativeBar.module.css';
 
 interface Props {
@@ -6,7 +6,6 @@ interface Props {
   onSeek: (time: number) => void;
 }
 
-const narrativeNodes = hotspots.filter((h) => h.type === 'narrative' || h.type === 'concept');
 
 export default function NarrativeBar({ currentTime, onSeek }: Props) {
   return (
