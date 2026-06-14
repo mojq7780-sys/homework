@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #0f0f12;
+  --bg-card: #141418;
+  --accent-gold: #8b7355;
+  --accent-cold: #4a6a7a;
+  --accent-purple: #3a2a4a;
+  --text-primary: #d4d0c8;
+  --text-secondary: #6a6a70;
+  --text-dim: #2a2a30;
+  --border: #1e1e24;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--accent-cold);
+  color: var(--text-primary);
+}

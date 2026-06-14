@@ -1,0 +1,68 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.content.visible {
+  opacity: 1;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.5em;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.3em;
+  font-weight: 300;
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 2s ease 1.5s;
+}
+
+.scrollHint.visible {
+  opacity: 1;
+}
+
+.scrollText {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.2em;
+}
+
+.scrollArrow {
+  width: 1px;
+  height: 30px;
+  background: var(--text-secondary);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}

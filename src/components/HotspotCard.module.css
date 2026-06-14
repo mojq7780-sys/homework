@@ -1,0 +1,103 @@
+.card {
+  position: absolute;
+  bottom: 5rem;
+  right: 1rem;
+  width: 320px;
+  background: rgba(15, 15, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem;
+  animation: slideIn 0.3s ease;
+  z-index: 10;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 3px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.typeStructure {
+  background: var(--accent-cold);
+  color: var(--text-primary);
+}
+
+.typeConcept {
+  background: var(--accent-gold);
+  color: #1a1a1a;
+}
+
+.typeNarrative {
+  background: var(--accent-purple);
+  color: var(--text-primary);
+}
+
+.continueBtn {
+  background: none;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+
+.continueBtn:hover {
+  background: var(--accent-gold);
+  color: #1a1a1a;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.detailBtn {
+  margin-top: 0.8rem;
+  background: none;
+  border: 1px solid var(--accent-cold);
+  color: var(--accent-cold);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+
+.detailBtn:hover {
+  background: var(--accent-cold);
+  color: var(--text-primary);
+}
